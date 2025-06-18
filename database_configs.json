@@ -1,0 +1,10 @@
+{
+  "chinook_sqlite": {
+    "type": "sqlite",
+    "name": "Chinook (Music Store)",
+    "description": "Digital music store with artists, albums, tracks, customers, and sales",
+    "file_path": "chinook.db",
+    "download_available": true,
+    "status": "ready"
+  }
+} 
