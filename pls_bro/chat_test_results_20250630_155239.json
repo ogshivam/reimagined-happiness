@@ -1,0 +1,1161 @@
+{
+  "regular_results": {
+    "results": [
+      {
+        "test_query": {
+          "question": "List all genres",
+          "category": "Basic SELECT queries",
+          "difficulty": 1,
+          "expected_tables": [
+            "Genre"
+          ],
+          "expected_keywords": [
+            "genre",
+            "name",
+            "list"
+          ],
+          "followup_potential": true,
+          "context_info": "Basic genre listing query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.9073486328125e-06,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Show me all customers",
+          "category": "Basic SELECT queries",
+          "difficulty": 1,
+          "expected_tables": [
+            "Customer"
+          ],
+          "expected_keywords": [
+            "customer",
+            "show",
+            "all"
+          ],
+          "followup_potential": true,
+          "context_info": "Customer listing query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "What are the track names?",
+          "category": "Basic SELECT queries",
+          "difficulty": 1,
+          "expected_tables": [
+            "Track"
+          ],
+          "expected_keywords": [
+            "track",
+            "name"
+          ],
+          "followup_potential": true,
+          "context_info": "Track name query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "How many customers are there?",
+          "category": "Aggregate functions",
+          "difficulty": 2,
+          "expected_tables": [
+            "Customer"
+          ],
+          "expected_keywords": [
+            "count",
+            "customer",
+            "how many"
+          ],
+          "followup_potential": true,
+          "context_info": "Customer count query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "What is the total revenue?",
+          "category": "Aggregate functions",
+          "difficulty": 3,
+          "expected_tables": [
+            "Invoice",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "sum",
+            "total",
+            "revenue"
+          ],
+          "followup_potential": true,
+          "context_info": "Revenue calculation query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Find the average track price",
+          "category": "Aggregate functions",
+          "difficulty": 2,
+          "expected_tables": [
+            "Track"
+          ],
+          "expected_keywords": [
+            "average",
+            "price",
+            "track"
+          ],
+          "followup_potential": true,
+          "context_info": "Average price calculation"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "What are the top 5 selling artists?",
+          "category": "JOIN operations",
+          "difficulty": 4,
+          "expected_tables": [
+            "Artist",
+            "Album",
+            "Track",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "top",
+            "artist",
+            "selling",
+            "5"
+          ],
+          "followup_potential": true,
+          "context_info": "Top artists by sales - complex join"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Show customer names with their countries",
+          "category": "JOIN operations",
+          "difficulty": 2,
+          "expected_tables": [
+            "Customer"
+          ],
+          "expected_keywords": [
+            "customer",
+            "name",
+            "country"
+          ],
+          "followup_potential": true,
+          "context_info": "Customer geography query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "List albums by AC/DC",
+          "category": "JOIN operations",
+          "difficulty": 3,
+          "expected_tables": [
+            "Artist",
+            "Album"
+          ],
+          "expected_keywords": [
+            "album",
+            "AC/DC",
+            "artist"
+          ],
+          "followup_potential": true,
+          "context_info": "Artist-specific album query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Which country has the highest total sales?",
+          "category": "Complex multi-table queries",
+          "difficulty": 5,
+          "expected_tables": [
+            "Customer",
+            "Invoice",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "country",
+            "highest",
+            "sales",
+            "total"
+          ],
+          "followup_potential": true,
+          "context_info": "Complex country sales analysis"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Find customers who bought rock music",
+          "category": "Complex multi-table queries",
+          "difficulty": 4,
+          "expected_tables": [
+            "Customer",
+            "Invoice",
+            "InvoiceLine",
+            "Track",
+            "Genre"
+          ],
+          "expected_keywords": [
+            "customer",
+            "rock",
+            "music",
+            "bought"
+          ],
+          "followup_potential": true,
+          "context_info": "Genre-based customer analysis"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Tell me more about the top artist",
+          "category": "Follow-up questions",
+          "difficulty": 3,
+          "expected_tables": [
+            "Artist",
+            "Album"
+          ],
+          "expected_keywords": [
+            "more",
+            "top",
+            "artist"
+          ],
+          "followup_potential": true,
+          "context_info": "Follow-up question requiring context",
+          "requires_context": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "What about the second one?",
+          "category": "Follow-up questions",
+          "difficulty": 2,
+          "expected_tables": [],
+          "expected_keywords": [
+            "second",
+            "one"
+          ],
+          "followup_potential": false,
+          "context_info": "Pronoun reference follow-up",
+          "requires_context": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Can you make a chart of this?",
+          "category": "Follow-up questions",
+          "difficulty": 2,
+          "expected_tables": [],
+          "expected_keywords": [
+            "chart",
+            "visualization"
+          ],
+          "followup_potential": false,
+          "context_info": "Visualization request follow-up",
+          "requires_context": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Display revenue information",
+          "category": "Semantic understanding",
+          "difficulty": 3,
+          "expected_tables": [
+            "Invoice",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "revenue",
+            "display",
+            "information"
+          ],
+          "followup_potential": true,
+          "context_info": "Revenue query with different phrasing",
+          "semantic_similar_to": "Show me sales data"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Give me details about music purchases",
+          "category": "Semantic understanding",
+          "difficulty": 4,
+          "expected_tables": [
+            "Customer",
+            "Invoice",
+            "Track"
+          ],
+          "expected_keywords": [
+            "details",
+            "music",
+            "purchases"
+          ],
+          "followup_potential": true,
+          "context_info": "Purchase details with semantic variation",
+          "semantic_similar_to": "Show me buying information"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.1920928955078125e-06,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "Show me something that doesn't exist",
+          "category": "Edge cases and errors",
+          "difficulty": 1,
+          "expected_tables": [],
+          "expected_keywords": [],
+          "followup_potential": false,
+          "context_info": "Non-existent data query",
+          "should_fail": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 3.0994415283203125e-06,
+        "approach": "regular"
+      },
+      {
+        "test_query": {
+          "question": "",
+          "category": "Edge cases and errors",
+          "difficulty": 1,
+          "expected_tables": [],
+          "expected_keywords": [],
+          "followup_potential": false,
+          "context_info": "Empty query test",
+          "should_fail": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.1920928955078125e-06,
+        "approach": "regular"
+      }
+    ],
+    "total_tests": 18,
+    "successful_tests": 0,
+    "approach": "regular_chat"
+  },
+  "semantic_results": {
+    "results": [
+      {
+        "test_query": {
+          "question": "List all genres",
+          "category": "Basic SELECT queries",
+          "difficulty": 1,
+          "expected_tables": [
+            "Genre"
+          ],
+          "expected_keywords": [
+            "genre",
+            "name",
+            "list"
+          ],
+          "followup_potential": true,
+          "context_info": "Basic genre listing query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.1920928955078125e-06,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Show me all customers",
+          "category": "Basic SELECT queries",
+          "difficulty": 1,
+          "expected_tables": [
+            "Customer"
+          ],
+          "expected_keywords": [
+            "customer",
+            "show",
+            "all"
+          ],
+          "followup_potential": true,
+          "context_info": "Customer listing query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.1920928955078125e-06,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "What are the track names?",
+          "category": "Basic SELECT queries",
+          "difficulty": 1,
+          "expected_tables": [
+            "Track"
+          ],
+          "expected_keywords": [
+            "track",
+            "name"
+          ],
+          "followup_potential": true,
+          "context_info": "Track name query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "How many customers are there?",
+          "category": "Aggregate functions",
+          "difficulty": 2,
+          "expected_tables": [
+            "Customer"
+          ],
+          "expected_keywords": [
+            "count",
+            "customer",
+            "how many"
+          ],
+          "followup_potential": true,
+          "context_info": "Customer count query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "What is the total revenue?",
+          "category": "Aggregate functions",
+          "difficulty": 3,
+          "expected_tables": [
+            "Invoice",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "sum",
+            "total",
+            "revenue"
+          ],
+          "followup_potential": true,
+          "context_info": "Revenue calculation query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Find the average track price",
+          "category": "Aggregate functions",
+          "difficulty": 2,
+          "expected_tables": [
+            "Track"
+          ],
+          "expected_keywords": [
+            "average",
+            "price",
+            "track"
+          ],
+          "followup_potential": true,
+          "context_info": "Average price calculation"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "What are the top 5 selling artists?",
+          "category": "JOIN operations",
+          "difficulty": 4,
+          "expected_tables": [
+            "Artist",
+            "Album",
+            "Track",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "top",
+            "artist",
+            "selling",
+            "5"
+          ],
+          "followup_potential": true,
+          "context_info": "Top artists by sales - complex join"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.1920928955078125e-06,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Show customer names with their countries",
+          "category": "JOIN operations",
+          "difficulty": 2,
+          "expected_tables": [
+            "Customer"
+          ],
+          "expected_keywords": [
+            "customer",
+            "name",
+            "country"
+          ],
+          "followup_potential": true,
+          "context_info": "Customer geography query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "List albums by AC/DC",
+          "category": "JOIN operations",
+          "difficulty": 3,
+          "expected_tables": [
+            "Artist",
+            "Album"
+          ],
+          "expected_keywords": [
+            "album",
+            "AC/DC",
+            "artist"
+          ],
+          "followup_potential": true,
+          "context_info": "Artist-specific album query"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Which country has the highest total sales?",
+          "category": "Complex multi-table queries",
+          "difficulty": 5,
+          "expected_tables": [
+            "Customer",
+            "Invoice",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "country",
+            "highest",
+            "sales",
+            "total"
+          ],
+          "followup_potential": true,
+          "context_info": "Complex country sales analysis"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Find customers who bought rock music",
+          "category": "Complex multi-table queries",
+          "difficulty": 4,
+          "expected_tables": [
+            "Customer",
+            "Invoice",
+            "InvoiceLine",
+            "Track",
+            "Genre"
+          ],
+          "expected_keywords": [
+            "customer",
+            "rock",
+            "music",
+            "bought"
+          ],
+          "followup_potential": true,
+          "context_info": "Genre-based customer analysis"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Tell me more about the top artist",
+          "category": "Follow-up questions",
+          "difficulty": 3,
+          "expected_tables": [
+            "Artist",
+            "Album"
+          ],
+          "expected_keywords": [
+            "more",
+            "top",
+            "artist"
+          ],
+          "followup_potential": true,
+          "context_info": "Follow-up question requiring context",
+          "requires_context": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "What about the second one?",
+          "category": "Follow-up questions",
+          "difficulty": 2,
+          "expected_tables": [],
+          "expected_keywords": [
+            "second",
+            "one"
+          ],
+          "followup_potential": false,
+          "context_info": "Pronoun reference follow-up",
+          "requires_context": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Can you make a chart of this?",
+          "category": "Follow-up questions",
+          "difficulty": 2,
+          "expected_tables": [],
+          "expected_keywords": [
+            "chart",
+            "visualization"
+          ],
+          "followup_potential": false,
+          "context_info": "Visualization request follow-up",
+          "requires_context": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 9.5367431640625e-07,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Display revenue information",
+          "category": "Semantic understanding",
+          "difficulty": 3,
+          "expected_tables": [
+            "Invoice",
+            "InvoiceLine"
+          ],
+          "expected_keywords": [
+            "revenue",
+            "display",
+            "information"
+          ],
+          "followup_potential": true,
+          "context_info": "Revenue query with different phrasing",
+          "semantic_similar_to": "Show me sales data"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Give me details about music purchases",
+          "category": "Semantic understanding",
+          "difficulty": 4,
+          "expected_tables": [
+            "Customer",
+            "Invoice",
+            "Track"
+          ],
+          "expected_keywords": [
+            "details",
+            "music",
+            "purchases"
+          ],
+          "followup_potential": true,
+          "context_info": "Purchase details with semantic variation",
+          "semantic_similar_to": "Show me buying information"
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "Show me something that doesn't exist",
+          "category": "Edge cases and errors",
+          "difficulty": 1,
+          "expected_tables": [],
+          "expected_keywords": [],
+          "followup_potential": false,
+          "context_info": "Non-existent data query",
+          "should_fail": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 1.1920928955078125e-06,
+        "approach": "semantic"
+      },
+      {
+        "test_query": {
+          "question": "",
+          "category": "Edge cases and errors",
+          "difficulty": 1,
+          "expected_tables": [],
+          "expected_keywords": [],
+          "followup_potential": false,
+          "context_info": "Empty query test",
+          "should_fail": true
+        },
+        "error": "'SQLChain' object has no attribute 'run'",
+        "execution_time": 0.0,
+        "approach": "semantic"
+      }
+    ],
+    "total_tests": 18,
+    "successful_tests": 0,
+    "approach": "semantic_chat"
+  },
+  "comparison": {
+    "overall_stats": {
+      "regular": {
+        "total_tests": 18,
+        "successful": 0,
+        "avg_execution_time": 7.285012139214409e-07,
+        "success_rate": 0.0
+      },
+      "semantic": {
+        "total_tests": 18,
+        "successful": 0,
+        "avg_execution_time": 4.238552517361111e-07,
+        "success_rate": 0.0
+      }
+    },
+    "category_performance": {
+      "JOIN operations": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      },
+      "Edge cases and errors": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      },
+      "Basic SELECT queries": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      },
+      "Aggregate functions": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      },
+      "Complex multi-table queries": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      },
+      "Follow-up questions": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      },
+      "Semantic understanding": {
+        "regular_success_rate": 0.0,
+        "semantic_success_rate": 0.0,
+        "regular_avg_relevance": 0.0,
+        "semantic_avg_relevance": 0.0
+      }
+    },
+    "followup_detection": {
+      "regular_accuracy": 0.0,
+      "semantic_accuracy": 0.0,
+      "improvement": 0.0
+    },
+    "semantic_understanding": {},
+    "detailed_comparisons": [
+      {
+        "test_number": 1,
+        "question": "List all genres",
+        "category": "Basic SELECT queries",
+        "regular": {
+          "success": false,
+          "execution_time": 1.9073486328125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 1.1920928955078125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 2,
+        "question": "Show me all customers",
+        "category": "Basic SELECT queries",
+        "regular": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 1.1920928955078125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 3,
+        "question": "What are the track names?",
+        "category": "Basic SELECT queries",
+        "regular": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 4,
+        "question": "How many customers are there?",
+        "category": "Aggregate functions",
+        "regular": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 5,
+        "question": "What is the total revenue?",
+        "category": "Aggregate functions",
+        "regular": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 6,
+        "question": "Find the average track price",
+        "category": "Aggregate functions",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 7,
+        "question": "What are the top 5 selling artists?",
+        "category": "JOIN operations",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 1.1920928955078125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 8,
+        "question": "Show customer names with their countries",
+        "category": "JOIN operations",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 9,
+        "question": "List albums by AC/DC",
+        "category": "JOIN operations",
+        "regular": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 10,
+        "question": "Which country has the highest total sales?",
+        "category": "Complex multi-table queries",
+        "regular": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 11,
+        "question": "Find customers who bought rock music",
+        "category": "Complex multi-table queries",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 12,
+        "question": "Tell me more about the top artist",
+        "category": "Follow-up questions",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 13,
+        "question": "What about the second one?",
+        "category": "Follow-up questions",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 14,
+        "question": "Can you make a chart of this?",
+        "category": "Follow-up questions",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 9.5367431640625e-07,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 15,
+        "question": "Display revenue information",
+        "category": "Semantic understanding",
+        "regular": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 16,
+        "question": "Give me details about music purchases",
+        "category": "Semantic understanding",
+        "regular": {
+          "success": false,
+          "execution_time": 1.1920928955078125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 17,
+        "question": "Show me something that doesn't exist",
+        "category": "Edge cases and errors",
+        "regular": {
+          "success": false,
+          "execution_time": 3.0994415283203125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 1.1920928955078125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      },
+      {
+        "test_number": 18,
+        "question": "",
+        "category": "Edge cases and errors",
+        "regular": {
+          "success": false,
+          "execution_time": 1.1920928955078125e-06,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        },
+        "semantic": {
+          "success": false,
+          "execution_time": 0.0,
+          "followup_detected": false,
+          "answer_length": 0,
+          "relevance": 0
+        }
+      }
+    ]
+  },
+  "report": "================================================================================\n\ud83e\udd16 COMPREHENSIVE CHAT APP TEST REPORT\n================================================================================\nGenerated: 2025-06-30 15:52:39\nTotal Test Queries: 18\n\n\ud83d\udccb EXECUTIVE SUMMARY\n----------------------------------------\n\u2022 Regular Chat Success Rate: 0.0%\n\u2022 Semantic Chat Success Rate: 0.0%\n\u2022 Success Rate Improvement: 0.0%\n\u2022 Follow-up Detection Improvement: 0.0%\n\n\u26a1 PERFORMANCE ANALYSIS\n----------------------------------------\n\u2022 Regular Chat Avg Response Time: 0.000s\n\u2022 Semantic Chat Avg Response Time: 0.000s\n\u2022 Performance Overhead: -41.8%\n\n\ud83d\udcca CATEGORY PERFORMANCE\n----------------------------------------\n\u2022 JOIN operations:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\u2022 Edge cases and errors:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\u2022 Basic SELECT queries:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\u2022 Aggregate functions:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\u2022 Complex multi-table queries:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\u2022 Follow-up questions:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\u2022 Semantic understanding:\n  - Regular: 0.0% | Semantic: 0.0% | \u0394+0.0%\n\n\ud83d\udd0d FOLLOW-UP DETECTION ANALYSIS\n----------------------------------------\n\u2022 Regular Chat Accuracy: 0.0%\n\u2022 Semantic Chat Accuracy: 0.0%\n\u2022 Detection Improvement: 0.0%\n\n\ud83d\udcdd DETAILED TEST RESULTS\n----------------------------------------\n 1. List all genres...\n    Category: Basic SELECT queries\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 2. Show me all customers...\n    Category: Basic SELECT queries\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 3. What are the track names?...\n    Category: Basic SELECT queries\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 4. How many customers are there?...\n    Category: Aggregate functions\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 5. What is the total revenue?...\n    Category: Aggregate functions\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 6. Find the average track price...\n    Category: Aggregate functions\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 7. What are the top 5 selling artists?...\n    Category: JOIN operations\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 8. Show customer names with their countries...\n    Category: JOIN operations\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n 9. List albums by AC/DC...\n    Category: JOIN operations\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n10. Which country has the highest total sales?...\n    Category: Complex multi-table queries\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n11. Find customers who bought rock music...\n    Category: Complex multi-table queries\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n12. Tell me more about the top artist...\n    Category: Follow-up questions\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n13. What about the second one?...\n    Category: Follow-up questions\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n14. Can you make a chart of this?...\n    Category: Follow-up questions\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n15. Display revenue information...\n    Category: Semantic understanding\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n16. Give me details about music purchases...\n    Category: Semantic understanding\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n17. Show me something that doesn't exist...\n    Category: Edge cases and errors\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n18. ...\n    Category: Edge cases and errors\n    Regular:  \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n    Semantic: \u2713False | 0.000s | Follow-up: False | Relevance: 0.00\n\n\ud83d\udca1 KEY INSIGHTS\n----------------------------------------\n\u2022 Best Improvement Category: JOIN operations (0.0%)\n\u2022 Context-dependent queries tested: 3\n\u2022 Semantic similarity tests: 2\n\n\ud83c\udfaf RECOMMENDATIONS\n----------------------------------------\n\u2022 \u26a0\ufe0f  Regular chat app performs better - investigate semantic implementation\n\u2022 \u26a0\ufe0f  Follow-up detection needs improvement\n\u2022 \u2705 Semantic processing overhead is acceptable\n\n================================================================================",
+  "total_execution_time": 0.00025200843811035156,
+  "timestamp": "2025-06-30T15:52:39.352225"
+}

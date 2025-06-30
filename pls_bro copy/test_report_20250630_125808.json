@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-30T12:56:10.024055",
+  "database_path": "chinook.db",
+  "tests_run": 17,
+  "tests_passed": 17,
+  "tests_failed": 0,
+  "detailed_results": [
+    {
+      "test_name": "Database Connection",
+      "success": true,
+      "details": "Found 11 tables",
+      "timestamp": "2025-06-30T12:56:10.041966"
+    },
+    {
+      "test_name": "SQL Chain - basic_count",
+      "success": true,
+      "details": "Time: 2.18s",
+      "timestamp": "2025-06-30T12:56:12.380183"
+    },
+    {
+      "test_name": "SQL Chain - aggregation",
+      "success": true,
+      "details": "Time: 3.70s",
+      "timestamp": "2025-06-30T12:56:17.088576"
+    },
+    {
+      "test_name": "SQL Chain - grouping",
+      "success": true,
+      "details": "Time: 5.03s",
+      "timestamp": "2025-06-30T12:56:23.123893"
+    },
+    {
+      "test_name": "SQL Chain - time_series",
+      "success": true,
+      "details": "Time: 4.71s",
+      "timestamp": "2025-06-30T12:56:28.842697"
+    },
+    {
+      "test_name": "SQL Chain - comparison",
+      "success": true,
+      "details": "Time: 3.84s",
+      "timestamp": "2025-06-30T12:56:33.690271"
+    },
+    {
+      "test_name": "SQL Chain - distribution",
+      "success": true,
+      "details": "Time: 8.53s",
+      "timestamp": "2025-06-30T12:56:43.227624"
+    },
+    {
+      "test_name": "SQL Chain - complex_join",
+      "success": true,
+      "details": "Time: 4.69s",
+      "timestamp": "2025-06-30T12:56:48.921154"
+    },
+    {
+      "test_name": "SQL Chain - analytical",
+      "success": true,
+      "details": "Time: 7.39s",
+      "timestamp": "2025-06-30T12:56:57.314599"
+    },
+    {
+      "test_name": "Simple Agent - basic_count",
+      "success": true,
+      "details": "Time: 14.37s",
+      "timestamp": "2025-06-30T12:57:12.810017"
+    },
+    {
+      "test_name": "Simple Agent - aggregation",
+      "success": true,
+      "details": "Time: 15.49s",
+      "timestamp": "2025-06-30T12:57:30.305861"
+    },
+    {
+      "test_name": "Simple Agent - grouping",
+      "success": true,
+      "details": "Time: 12.14s",
+      "timestamp": "2025-06-30T12:57:44.454541"
+    },
+    {
+      "test_name": "Enhanced Agent - aggregation",
+      "success": true,
+      "details": "Time: 2.41s, Charts: 3",
+      "timestamp": "2025-06-30T12:57:48.991246"
+    },
+    {
+      "test_name": "Enhanced Agent - grouping",
+      "success": true,
+      "details": "Time: 1.88s, Charts: 1",
+      "timestamp": "2025-06-30T12:57:53.877237"
+    },
+    {
+      "test_name": "Enhanced Agent - distribution",
+      "success": true,
+      "details": "Time: 2.50s, Charts: 1",
+      "timestamp": "2025-06-30T12:57:59.385794"
+    },
+    {
+      "test_name": "Enhanced Agent - comparison",
+      "success": true,
+      "details": "Time: 3.17s, Charts: 3",
+      "timestamp": "2025-06-30T12:58:05.562183"
+    },
+    {
+      "test_name": "Visualization - Chart Detection",
+      "success": true,
+      "details": "4 chart types suggested",
+      "timestamp": "2025-06-30T12:58:08.582539"
+    }
+  ]
+}

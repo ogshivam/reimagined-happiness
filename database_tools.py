@@ -332,17 +332,17 @@ def get_chinook_schema_description() -> str:
     The Chinook database is a sample database that represents a digital media store.
     
     Key Tables:
-    - artists: Information about music artists
-    - albums: Music albums with artist references
-    - tracks: Individual songs/tracks with album, media type, and genre references
-    - customers: Customer information including contact details
-    - employees: Employee information and hierarchy
-    - invoices: Sales invoices with customer references
-    - invoice_items: Individual items within invoices
-    - genres: Music genres
-    - media_types: Types of media (MP3, AAC, etc.)
-    - playlists: User-created playlists
-    - playlist_track: Many-to-many relationship between playlists and tracks
+    - Artist: Information about music artists
+    - Album: Music albums with artist references
+    - Track: Individual songs/tracks with album, media type, and genre references
+    - Customer: Customer information including contact details
+    - Employee: Employee information and hierarchy
+    - Invoice: Sales invoices with customer references
+    - InvoiceLine: Individual items within invoices
+    - Genre: Music genres
+    - MediaType: Types of media (MP3, AAC, etc.)
+    - Playlist: User-created playlists
+    - PlaylistTrack: Many-to-many relationship between playlists and tracks
     
     Common Relationships:
     - Artists have many Albums

@@ -65,7 +65,7 @@ SQL Query:"""
         )
         
         def extract_sql(response):
-            """Extract just the SQL from the response."""
+            """Extract just the SQL from the response with improved robustness."""
             sql = response.strip()
             
             # Remove common prefixes
@@ -82,71 +82,71 @@ SQL Query:"""
             ]
             
             for prefix in prefixes_to_remove:
-                if sql.startswith(prefix):
+                if sql.lower().startswith(prefix.lower()):
                     sql = sql[len(prefix):].strip()
             
             # Remove markdown code blocks
             if sql.startswith('```'):
                 sql = sql[3:].strip()
-                if sql.startswith('sql'):
+                if sql.lower().startswith('sql'):
                     sql = sql[3:].strip()
             
             if sql.endswith('```'):
                 sql = sql[:-3].strip()
             
-            # Remove trailing explanations and extra text
-            lines = sql.split('\n')
-            sql_lines = []
-            found_sql = False
+            # Simple approach: find the SQL statement by looking for SELECT to semicolon
+            # This avoids the complex parsing that was causing truncation
+            import re
             
-            for line in lines:
-                line = line.strip()
+            # Look for a complete SQL statement (more permissive pattern)
+            sql_pattern = r'(SELECT\s+.*?;)'
+            match = re.search(sql_pattern, sql, re.IGNORECASE | re.DOTALL)
+            
+            if match:
+                result = match.group(1).strip()
+            else:
+                # Fallback: take everything and ensure it ends with semicolon
+                # Remove obvious non-SQL lines (explanatory text)
+                lines = sql.split('\n')
+                sql_lines = []
                 
-                # Skip empty lines
-                if not line:
-                    continue
-                    
-                # Skip comments
-                if line.startswith('--') or line.startswith('#'):
-                    if found_sql:
-                        break  # stop at comments after SQL
-                    continue
-                    
-                # Check if this looks like SQL
-                if line.lower().startswith(('select', 'with', 'update', 'insert', 'delete', 'from', 'where', 'group', 'order', 'limit', 'having')):
-                    found_sql = True
-                    sql_lines.append(line)
-                elif found_sql and any(keyword in line.lower() for keyword in ['from', 'where', 'group', 'order', 'limit', 'join', 'and', 'or', '=']):
-                    sql_lines.append(line)
-                elif found_sql and line.endswith(';'):
-                    sql_lines.append(line)
-                    break  # Complete SQL statement
-                elif found_sql:
-                    # Check if this looks like a continuation
-                    if line.startswith('"') or line.startswith("'") or any(c in line for c in ['(', ')', ',', '*']):
-                        sql_lines.append(line)
-                    else:
-                        break  # Looks like explanation text
-            
-            if not sql_lines:
-                # Fallback - just take first line that looks like SQL
                 for line in lines:
                     line = line.strip()
-                    if line and line.lower().startswith('select'):
-                        return line.rstrip(';') + ';'
-                return sql.split('\n')[0].strip()
-            
-            result = ' '.join(sql_lines).strip()
-            
-            # Clean up extra semicolons
-            while result.endswith(';;'):
-                result = result[:-1]
+                    if not line:
+                        continue
+                    
+                    # Skip obvious explanation lines
+                    if (line.lower().startswith(('this query', 'the query', 'explanation:', 'note:')) or
+                        'explanation' in line.lower() or
+                        line.startswith('--') or line.startswith('#')):
+                        continue
+                    
+                    sql_lines.append(line)
                 
-            # Ensure ends with semicolon
-            if not result.endswith(';'):
-                result += ';'
+                result = ' '.join(sql_lines).strip()
             
-            return result
+            # Clean up and validate
+            if result:
+                # Remove extra semicolons
+                while result.endswith(';;'):
+                    result = result[:-1]
+                
+                # Ensure ends with semicolon
+                if not result.endswith(';'):
+                    result += ';'
+                
+                # Basic validation - should start with SELECT, INSERT, UPDATE, DELETE, or WITH
+                result_lower = result.lower().strip()
+                if not result_lower.startswith(('select', 'with', 'insert', 'update', 'delete')):
+                    # Try to find the actual SQL part
+                    for line in result.split():
+                        if line.lower().startswith(('select', 'with', 'insert', 'update', 'delete')):
+                            # Reconstruct from this point
+                            start_idx = result.lower().find(line.lower())
+                            result = result[start_idx:]
+                            break
+            
+            return result if result else sql
         
         # Create a partial chain with schema already bound
         from langchain_core.runnables import RunnableLambda

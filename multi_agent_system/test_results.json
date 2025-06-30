@@ -1,0 +1,263 @@
+{
+  "summary": {
+    "total": 42,
+    "passed": 42,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "errors": [],
+  "detailed_results": {
+    "Import config.settings": {
+      "success": true,
+      "message": "Successfully imported settings",
+      "error": null,
+      "timestamp": "2025-06-24T11:11:51.325051"
+    },
+    "Import database.models": {
+      "success": true,
+      "message": "Successfully imported DatabaseManager, ConversationMemory",
+      "error": null,
+      "timestamp": "2025-06-24T11:11:51.465086"
+    },
+    "Import memory.vector_store": {
+      "success": true,
+      "message": "Successfully imported ConversationVectorStore",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:57.897086"
+    },
+    "Import utils.rate_limiter": {
+      "success": true,
+      "message": "Successfully imported RateLimiter, rate_limiter",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:57.898226"
+    },
+    "Import agents.sql_agent": {
+      "success": true,
+      "message": "Successfully imported SQLAgent",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674298"
+    },
+    "Import agents.context_agent": {
+      "success": true,
+      "message": "Successfully imported ContextAgent",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674331"
+    },
+    "Import agents.visualization_agent": {
+      "success": true,
+      "message": "Successfully imported VisualizationAgent",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674345"
+    },
+    "Import agents.insight_agent": {
+      "success": true,
+      "message": "Successfully imported InsightAgent",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674357"
+    },
+    "Import agents.memory_agent": {
+      "success": true,
+      "message": "Successfully imported MemoryAgent",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674367"
+    },
+    "Import agents.export_agent": {
+      "success": true,
+      "message": "Successfully imported ExportAgent",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674377"
+    },
+    "Import agents.orchestrator": {
+      "success": true,
+      "message": "Successfully imported MultiAgentOrchestrator",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.674387"
+    },
+    "DatabaseManager Init": {
+      "success": true,
+      "message": "DatabaseManager initialized successfully",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.694555"
+    },
+    "Database Engine": {
+      "success": true,
+      "message": "Engine connected: Engine(sqlite:///chinook.db)",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.694568"
+    },
+    "Get Tables": {
+      "success": true,
+      "message": "Found 11 tables: ['Album', 'Artist', 'Customer', 'Employee', 'Genre']",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.694870"
+    },
+    "Database Summary": {
+      "success": true,
+      "message": "Summary keys: ['database_url', 'total_tables', 'tables']",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.712850"
+    },
+    "Sample Data": {
+      "success": true,
+      "message": "Retrieved 3 sample rows from Album",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.713121"
+    },
+    "Query Execution": {
+      "success": true,
+      "message": "Query returned 1 rows with metadata",
+      "error": null,
+      "timestamp": "2025-06-24T11:12:58.715586"
+    },
+    "VectorStore Init": {
+      "success": true,
+      "message": "ConversationVectorStore initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:13:58.771324"
+    },
+    "Add Conversation": {
+      "success": true,
+      "message": "Added conversation with ID: ac5b7b31baf1f6729b2c9186de1f3a1e",
+      "error": null,
+      "timestamp": "2025-06-24T11:13:59.104979"
+    },
+    "Search Conversations": {
+      "success": true,
+      "message": "Search returned 5 results",
+      "error": null,
+      "timestamp": "2025-06-24T11:13:59.171681"
+    },
+    "Add SQL Query": {
+      "success": true,
+      "message": "Added SQL query with ID: d86a60d608559bcda23b16cfbf1e57bb",
+      "error": null,
+      "timestamp": "2025-06-24T11:13:59.212885"
+    },
+    "Add Insight": {
+      "success": true,
+      "message": "Added insight with ID: 57a61892a9c5c4366fe2effd4f52388f",
+      "error": null,
+      "timestamp": "2025-06-24T11:13:59.290236"
+    },
+    "SQL Agent Init": {
+      "success": true,
+      "message": "SQL Agent initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:14:55.881583"
+    },
+    "SQL Agent Schema": {
+      "success": true,
+      "message": "Schema contains 11 tables",
+      "error": null,
+      "timestamp": "2025-06-24T11:14:55.918440"
+    },
+    "SQL Generation": {
+      "success": true,
+      "message": "SQL generation result: True",
+      "error": null,
+      "timestamp": "2025-06-24T11:15:04.682563"
+    },
+    "Context Agent Init": {
+      "success": true,
+      "message": "Context Agent initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:15:57.940981"
+    },
+    "Start Session": {
+      "success": true,
+      "message": "Created session: test_user_faa5a558",
+      "error": null,
+      "timestamp": "2025-06-24T11:15:57.942377"
+    },
+    "Get Context": {
+      "success": true,
+      "message": "Context type: <class 'dict'>",
+      "error": null,
+      "timestamp": "2025-06-24T11:15:58.101393"
+    },
+    "Visualization Agent Init": {
+      "success": true,
+      "message": "Visualization Agent initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:15:58.101893"
+    },
+    "Create Visualization": {
+      "success": true,
+      "message": "Visualization result: True",
+      "error": null,
+      "timestamp": "2025-06-24T11:15:58.737477"
+    },
+    "Insight Agent Init": {
+      "success": true,
+      "message": "Insight Agent initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:16:47.020730"
+    },
+    "Generate Insights": {
+      "success": true,
+      "message": "Insights result: True",
+      "error": null,
+      "timestamp": "2025-06-24T11:16:53.058096"
+    },
+    "Memory Agent Init": {
+      "success": true,
+      "message": "Memory Agent initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:17:57.418769"
+    },
+    "Store Conversation": {
+      "success": true,
+      "message": "Conversation stored: True",
+      "error": null,
+      "timestamp": "2025-06-24T11:17:57.476016"
+    },
+    "Export Agent Init": {
+      "success": true,
+      "message": "Export Agent initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:17:57.476063"
+    },
+    "Export Data": {
+      "success": true,
+      "message": "Export result: True",
+      "error": null,
+      "timestamp": "2025-06-24T11:17:57.492161"
+    },
+    "Orchestrator Init": {
+      "success": true,
+      "message": "MultiAgentOrchestrator initialized",
+      "error": null,
+      "timestamp": "2025-06-24T11:22:00.584281"
+    },
+    "Orchestrator Session": {
+      "success": true,
+      "message": "Session created: test_user_bcf7a17d",
+      "error": null,
+      "timestamp": "2025-06-24T11:22:00.585084"
+    },
+    "Rate Limiter Basic": {
+      "success": true,
+      "message": "Rate limiter result: Success: test",
+      "error": null,
+      "timestamp": "2025-06-24T11:22:00.976221"
+    },
+    "Rate Limiter Error Handling": {
+      "success": true,
+      "message": "Correctly handled exception",
+      "error": null,
+      "timestamp": "2025-06-24T11:22:09.994201"
+    },
+    "SQL Integration": {
+      "success": true,
+      "message": "Integration result type: <class 'dict'>",
+      "error": null,
+      "timestamp": "2025-06-24T11:23:48.952590"
+    },
+    "Context Integration": {
+      "success": true,
+      "message": "Retrieved 1 conversation entries",
+      "error": null,
+      "timestamp": "2025-06-24T11:25:04.959091"
+    }
+  }
+}
